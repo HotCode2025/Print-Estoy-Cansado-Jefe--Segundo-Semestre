@@ -42,13 +42,13 @@ Ingresamos toda esta informacion y terminamos.
 
 # Vamos a cargar la llave SSH publica en GitHub
 
-Para copiar la llave publica debes ir al archivo .ssh y allí encontrarás el archivo .pub lo podes abrir con el txt, luego copiar el contenido que esta dentro.
+* Para copiar la llave publica debes ir al archivo .ssh y allí encontrarás el archivo .pub lo podes abrir con el txt, luego copiar el contenido que esta dentro.
 
-copiar la llave publica #Ir a GitHub, vamos a setting, vamos a SSH and GPG keys
+* Copiar la llave publica #Ir a GitHub, vamos a setting, vamos a SSH and GPG keys
 
-crear una nueva #New SSH key poner nombre y pegar la ssh publica, con esto esta listo.
+* Crear una nueva #New SSH key poner nombre y pegar la ssh publica, con esto esta listo.
 
-Aconsejo que la ssh tenga el nombre del ordenador en el que estas trabajando. Esto se debe hacer con cada pc nueva o dispositivo nuevo que tengamos para acceder a nuestra cuenta de GitHub.
+* Aconsejo que la ssh tenga el nombre del ordenador en el que estas trabajando. Esto se debe hacer con cada pc nueva o dispositivo nuevo que tengamos para acceder a nuestra cuenta de GitHub.
 ```sh
 git branch #Vemos en que rama estamos
 
