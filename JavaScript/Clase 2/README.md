@@ -8,9 +8,11 @@ En esta clase se introducen los **arreglos (arrays) en JavaScript**, cómo recor
 
 https://drive.google.com/file/d/1EjGhJDrbw541-7LW-x0beq1Coe86TuE_/view
 
+
 ### 1.2 🔄 Recorremos los elementos de un arreglo
 
 https://drive.google.com/file/d/15_sAgBhMbscwBF7Ssh72d33gqOKPvPBa/view
+
 
 ### 1.3 ✏️ Modificamos los elementos
 
