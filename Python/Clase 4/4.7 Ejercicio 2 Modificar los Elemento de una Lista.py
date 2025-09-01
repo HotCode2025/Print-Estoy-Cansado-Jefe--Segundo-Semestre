@@ -1,0 +1,30 @@
+# Ejercicio 2: Operaciones de conjuntos con listas
+# Escriba un programa que tenga 2 listas y que a continuacion
+# cree las siguientes listas (en las que no deben haber repeticion)
+# 1 Lista de palabras que aparecen en las listas
+# 2 Lista de palabras que aparecen en la primera lista, pero no en la segunda
+# 3 Lista de palabras que aparecen en la segunda lista, pero no en la primera
+# 4 Lista de palabras que aparecen en ambas listas
+
+lista1 = ["perro", "gato", "loro", "caballo", "hamster"]
+lista2 =  ["vaca", "oveja", "cabra", "caballo", "conejo"]
+
+set1 = set(lista1)
+set2 = set(lista2)
+
+# 1 Lista de palabras que aparecen en las listas
+union = list(set1 | set2)
+
+# 2 Lista de palabras que aparecen en la primera lista, pero no en la segunda
+palabrasPrimerLista = list(set1 - set2)
+
+# 3 Lista de palabras que aparecen en la segunda lista, pero no en la primera
+palabrasSegundaLista = list(set2 - set1)
+
+# 4 Lista de palabras que aparecen en ambas listas
+palabrasAmbasListas = list(set1 & set2)
+
+print("Lista de palabras que aparecen en las listas: ",union)
+print("Palabras que solo aparecen en la primer lista: ", palabrasPrimerLista)
+print("Palabras que solo aparecen en la sefgunda lista: ", palabrasSegundaLista)
+print("Palabras que aparecen en ambas listas: ", palabrasAmbasListas)
