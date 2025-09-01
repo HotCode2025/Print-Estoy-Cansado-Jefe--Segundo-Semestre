@@ -12,19 +12,19 @@ lista2 =  ["vaca", "oveja", "cabra", "caballo", "conejo"]
 set1 = set(lista1)
 set2 = set(lista2)
 
-# 1 Lista de palabras que aparecen en las listas
+# Lista de palabras que aparecen en las listas
 union = list(set1 | set2)
 
-# 2 Lista de palabras que aparecen en la primera lista, pero no en la segunda
+# Lista de palabras que aparecen en la primera lista, pero no en la segunda
 palabrasPrimerLista = list(set1 - set2)
 
-# 3 Lista de palabras que aparecen en la segunda lista, pero no en la primera
+# Lista de palabras que aparecen en la segunda lista, pero no en la primera
 palabrasSegundaLista = list(set2 - set1)
 
-# 4 Lista de palabras que aparecen en ambas listas
+# Lista de palabras que aparecen en ambas listas
 palabrasAmbasListas = list(set1 & set2)
 
-print("Lista de palabras que aparecen en las listas: ",union)
-print("Palabras que solo aparecen en la primer lista: ", palabrasPrimerLista)
-print("Palabras que solo aparecen en la sefgunda lista: ", palabrasSegundaLista)
-print("Palabras que aparecen en ambas listas: ", palabrasAmbasListas)
+print("Palabras que aparecen en las listas: ",union)
+print(f"\nPalabras que solo aparecen en la primer lista: ", palabrasPrimerLista)
+print(f"\nPalabras que solo aparecen en la segunda lista: ", palabrasSegundaLista)
+print(f"\nPalabras que aparecen en ambas listas: ", palabrasAmbasListas)
