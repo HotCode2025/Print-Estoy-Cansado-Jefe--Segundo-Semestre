@@ -126,7 +126,6 @@ La creación de las SSH es necesario solo una vez por cada computadora. Aquí co
 * Ahora podemos actualizar la URL que guardamos en nuestro repositorio remoto, solo que, en vez de guardar la URL con HTTPS, vamos a usar la URL con SSH:
 
 ```ssh
-
 git remote set-url origin url-ssh-del-repositorio-en-github
 ```
 ## Comandos para copiar la llave SSH:
