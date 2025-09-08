@@ -1,48 +1,3 @@
-// ========== DIFERENTES FORMAS DE CREAR OBJETOS ==========
-console.log('\n=== DIFERENTES FORMAS DE CREAR OBJETOS ===');
-
-// caso objeto 1
-let miobjeto = new Object(); // Esta es una opción formal
-// caso objeto 2
-let miobjeto2 = {}; // Esta opción es breve y recomendada
-
-// caso String 1
-let miCadena1 = new String('Hola'); // Sintaxis formal
-// caso String 2
-let miCadena2 = 'Hola'; // Esta es la sintaxis simplificada y recomendada
-
-// caso con números 1
-let miNumero = new Number(1); // Es formal no recomendable
-// caso con números 2
-let miNumero2 = 1; // Sintaxis recomendada
-
-// caso boolean 1
-let miBoolean1 = new Boolean(false); // Formal
-// caso boolean 2
-let miBoolean2 = false; // Sintaxis recomendada
-
-// caso Arreglos 1
-let miArreglo1 = new Array(); // Formal
-// caso Arreglos 2
-let miArreglo2 = []; // Sintaxis recomendada
-
-// caso function 1
-let miFuncion1 = new function(){}; // Todo después de new es considerado objeto
-// caso function 2
-let miFuncion2 = function(){}; // Notación simplificada y recomendada
-
-// Mostrar ejemplos
-console.log('Objeto formal:', miobjeto);
-console.log('Objeto simplificado:', miobjeto2);
-console.log('String formal:', miCadena1);
-console.log('String simplificado:', miCadena2);
-console.log('Número formal:', miNumero);
-console.log('Número simplificado:', miNumero2);
-console.log('Boolean formal:', miBoolean1);
-console.log('Boolean simplificado:', miBoolean2);
-console.log('Array formal:', miArreglo1);
-console.log('Array simplificado:', miArreglo2);
-
 // ========== TIPOS PRIMITIVOS ==========
 console.log('\n=== TIPOS PRIMITIVOS ===');
 let x = 10; // variable de tipo primitiva
@@ -162,3 +117,12 @@ console.log(padre.nombreComplete()); // Utilizamos la función: Luis Lopez
 let madre = new Persona3('Laura', 'Contrera', 'contrera1@gmail.com');
 console.log('Objeto madre:', madre); // Persona3 { nombre: 'Laura', apellido: 'Contrera', email: 'contrera1@gmail.com'}
 console.log(madre.nombreComplete()); // Laura Contrera
+Persona.prototype.telefono = function() {
+    return 549261638332;
+};
+
+let madre = new Persona('Luis', 'Lopez', 'lopezl@gmail.com');
+console.log(madre.telefono()); // 549261638332
+
+madre.telefono = 261638332;
+console.log(madre.telefono); // 261638332
