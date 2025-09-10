@@ -190,15 +190,15 @@ Las etiquetas anotadas almacenan información adicional como la fecha, etiquetad
 ```sh
 git tag
 ```
-* Esto mostrará una lista de las etiquetas existentes, como:
+Esto mostrará una lista de las etiquetas existentes, como:
 
-v1.0
+* v1.0
 
-v1.1
+* v1.1
 
-v1.2
+* v1.2
 
-* Para perfeccionar la lista, puedes utilizar opciones adicionales, como -l con una expresión comodín.
+ Para perfeccionar la lista, puedes utilizar opciones adicionales, como -l con una expresión comodín.
 
 
 ## Uso compartido de etiquetas
