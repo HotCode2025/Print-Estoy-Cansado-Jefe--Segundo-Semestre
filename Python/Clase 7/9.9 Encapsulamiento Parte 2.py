@@ -8,8 +8,7 @@ class Persona:  # Creamos una clase
         self.kwargs = kwargs
 
     def mostrar_detalle(self): # self es igual a this
-        print(f'La clase Persona tiene los siguientes datos: {self.nombre} {self.apellido} {self._dni} {self.edad} {self.args} {self.kwargs}')
-
+print(f'La clase Persona tiene los siguientes datos: {self.nombre} {self.apellido} {self._dni} {self.edad} la dirreccion es: {self.args} los datos importantes son: {self.kwargs}')
 
 persona1 = Persona('Ariel', 'Betancud', 32456987, 40) # Necesitamos enviar argumentos
 print(persona1.nombre) # Tarea: Hacer el print igual que con el objeto 2
@@ -34,7 +33,7 @@ persona1.telefono = '44445555289'
 print(f'Este es el telefono de: {persona1.nombre} {persona1.telefono}') # Hemos creado un atributo de un objeto
 
 # print(persona2.telefono) el objeto persona2 no tiene este atributo, da error
-persona3 = Persona('Rogelio', 'Romero', 35789456, 22, 'Teléfono', '2614445557', 'Calle Lopez', 823, 'Man')
+persona3 = Persona('Rogelio', 'Romero', 35789456, 22, 'Teléfono', '2614445557', 'Calle Lopez', 823, 'Manzana', 77, 'Casa', 18, Altura= 1.83, Peso=105, CFavorito='Azul', Auto='Citroen', Modelo=2021)
 persona3.mostrar_detalle()
 
 # print(persona3._dni) # esto no se debe utilizar(esta encapsulado), esto dice que lo desconocemos python
