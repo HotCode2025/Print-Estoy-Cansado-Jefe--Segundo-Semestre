@@ -1,0 +1,89 @@
+# Similitudes entre JavaScript y Java
+
+## Sintaxis Básica
+- `//` para comentarios de una línea
+- `/* */` para comentarios multilínea
+- `;` al final de las sentencias (opcional en JS)
+- `{}` para bloques de código
+- Uso de llaves en estructuras de control
+
+## Estructuras de Control
+- `if`, `else if`, `else`
+- `switch`, `case`, `break`, `default`
+- `for`, `while`, `do while`
+- `break` y `continue` en loops
+
+## Operadores Aritméticos
+- `+` (suma/concatenación)
+- `-` (resta)
+- `*` (multiplicación)
+- `/` (división)
+- `%` (módulo)
+- `++` (incremento) - Pre: `++a`, Post: `a++`
+- `--` (decremento) - Pre: `--a`, Post: `a--`
+
+## Operadores de Comparación
+- `==` (igualdad, con coerción en JS)
+- `===` (igualdad estricta, como == en Java)
+- `!=` (diferente, con coerción en JS)
+- `!==` (diferente estricto, como != en Java)
+- `>`, `<`, `>=`, `<=`
+
+## Operadores Lógicos
+- `&&` (AND)
+- `||` (OR)
+- `!` (NOT)
+
+## Operadores de Asignación
+- `=` (asignación simple)
+- `+=`, `-=`, `*=`, `/=`, `%=` (asignación compuesta)
+
+## Palabras Reservadas Comunes
+- `var`, `let`, `const` (JS) vs tipos primitivos (Java)
+- `function` (JS) vs `void`, tipos de retorno (Java)
+- `return` para retornar valores
+- `this` para referenciar el objeto actual
+- `new` para crear instancias
+- `null` para valores nulos
+
+## Caracteres de Escape en Strings
+- `\n` = salto de línea
+- `\r` = retorno de carro
+- `\t` = tabulación
+- `\b` = retroceso
+- `\f` = salto de página
+- `\\` = barra invertida
+- `\"` = comillas dobles
+- `\'` = comillas simples
+
+## Programación Orientada a Objetos (Conceptos)
+- Clases (ES6+ en JS)
+- Constructores
+- Métodos y propiedades
+- Herencia (aunque con implementación diferente)
+- Encapsulamiento (convenciones)
+- Polimorfismo
+
+## Manejo de Excepciones
+- `try`, `catch`, `finally`
+- `throw` para lanzar excepciones
+
+## Estructuras de Datos
+- Arrays (sintaxis similar: `[]`)
+- Objetos (concepto similar, sintaxis diferente)
+
+## Convenciones de Nomenclatura
+- camelCase para variables y métodos
+- PascalCase para clases y constructores
+- Uso de identificadores descriptivos
+
+## Características de Funciones
+- Parámetros y argumentos
+- Valores de retorno
+- Ámbito de variables (scope)
+- Funciones anónimas (más flexibles en JS)
+
+## Sistema de Tipos
+- Tipos primitivos: number, string, boolean (JS) vs int, String, boolean (Java)
+- Tipos por referencia: objetos y arrays
+- Coerción automática (más flexible en JS)
