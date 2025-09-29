@@ -1,4 +1,5 @@
 //Clase 8
+//Parte 1 Ejercicio 8.4
 
 
 class Persona{ //Clase padre
