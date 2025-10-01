@@ -5,3 +5,4 @@ if __name__ == "__main__":
     persona5.mostrar_detalles()
 
     print(__name__)
+
