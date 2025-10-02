@@ -222,6 +222,44 @@ Esto eliminará la etiqueta identificada por en el repositorio local.
 
 En resumen, las etiquetas en Git son esenciales para asignar versiones y capturar instantáneas importantes en el historial de un proyecto. Aprender a crear, listar, compartir y eliminar etiquetas mejorará tu flujo de trabajo con Git.
 
+# Manejo de ramas en GitHub
+
+Es bueno recordar sobre gitk. Si no te funciona el comando gitk es posible no lo tengas instalado por defecto. Esta es una herramienta muy util a la hora de ver graficamente nuestro trabajo y así entender mejor todo el funcionamiento de ramas, merge y todo el flujo en un formato ordenado.
+
+
+Para instalar gitk debemos ejecutar los siguientes comandos:
+
+
+
+```sh
+
+  sudo apt-get update
+
+
+  sudo apt-get install gitk
+
+```
+
+## Repasa: ¿Qué es Git?
+
+Las ramas nos permiten hacer cambios a nuestros archivos sin modificar la versión principal (main). Puedes trabajar con ramas que nunca envías a GitHub, así como pueden haber ramas importantes en GitHub que nunca usas en el repositorio local. Lo crucial es que aprendas a manejarlas para trabajar profesionalmente.
+
+Si, estando en otra rama, modificamos los archivos y hacemos commit, tanto el historial(git log) como los archivos serán afectados. La ventaja que tiene usar ramas es que las modificaciones solo afectarán a esa rama en particular. Si luego de “guardar” los archivos(usando commit) nos movemos a otra rama (git checkout otraRama) veremos como las modificaciones de la rama pasada no aparecen en la otraRama.
+
+## Comandos para manejo de ramas en GitHub
+Crear una rama:
+
+
+```sh
+git branch branchName #Crear una rama
+git checkout -b branchName #También crea una rama
+git checkout branchName #Movernos a otra rama 
+git push origin branchName #Publicar una rama local al repositorio remoto
+```
+
+Recuerda que podemos ver gráficamente nuestro entorno y flujo de trabajo local con Git utilizando el comando gitk. Gitk fue el primer visor gráfico que se desarrolló para ver de manera gráfica el historial de un repositorio de Git.
+
+
 
 
 
