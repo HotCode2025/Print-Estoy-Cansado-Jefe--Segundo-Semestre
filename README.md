@@ -268,7 +268,7 @@ Por defecto, cualquier persona puede clonar o descargar tu proyecto desde GitHub
 
 Solo debemos entrar a la configuración de colaboradores de nuestro proyecto. Se encuentra en:
 
-Repositorio > Settings > Collaborators
+* Repositorio > Settings > Collaborators
 
 Ahí, debemos añadir el email o username de los nuevos colaboradores.
 
