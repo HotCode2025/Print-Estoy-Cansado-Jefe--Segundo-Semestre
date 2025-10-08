@@ -286,13 +286,13 @@ cd Documentos #Abre git bash
 mkdir class-git #Crea la carpeta o directorio de trabajo
 ls -al #Revisa lo que va haciendo, los archivos o directorios que tiene
 ```
-## 1. No debe hacer un git init, debe buscar el repositorio en el cual esta invitado a participar, por supuesto en GitHub.
-## 2. Pasa a clonar desde HTTPS, copiar la url, esto es porque no se arranca el proyecto desde cero, se esta uniendo otro colaborador.
-## 3. En git bash ponemos el siguiente comando.
+* 1. No debe hacer un git init, debe buscar el repositorio en el cual esta invitado a participar, por supuesto en GitHub.
+* 2. Pasa a clonar desde HTTPS, copiar la url, esto es porque no se arranca el proyecto desde cero, se esta uniendo otro colaborador.
+* 3. En git bash ponemos el siguiente comando.
 ```sh
 git clone url-copiada-github #Esto hace que clonemos el repositorio
 ```
-## 4. No pide ni usuario ni contraseña si el repositorio es publico.
+* 4. No pide ni usuario ni contraseña si el repositorio es publico.
 ```sh
 code . #Abre VSC y comienza con cambios, o abre el siguiente comando para hacer modificaciones
 vim historia.txt #Vamos a escribir: Aquí esta un nuevo colaborador
@@ -312,21 +312,21 @@ git log #Para ver toda las historia
 git log --graph #Vemos el grafico de las diferentes ramas y del commit que acabamos de hacer que esta en el main, Git es una base de datos de toda las historia de todo lo que se ha hecho
 git push origin main #Va a pedir un email que será el del colaborador, su contraseña.
 ```
-## 5. Nos trae un denegado, ¿Por qué? Porque en el proceso de abordaje el jefe no le dio acceso: el dueño del repositorio no le agregó dandole acceso.
-## 6. Ir a settings del repositorio, veremos la opsión Collaborators, agregamos el correo o nombre de usuario: el colaborador debe tener un email publico y visible o de otra manera debera ser con el nombre de usuario publico: ingresar el username y debe ir como colaborador.
-## 7. Se puede enviar un email con la url, pero ya GitHub envia una notificación al usuario de invitado, es una cosa que debemos empezar a consultar y revisar.
-## 8. El colaborador debe aceptar la invitación, una vez hecho eso ya tendrá total acceso para hacer push al repositorio.
+* 5. Nos trae un denegado, ¿Por qué? Porque en el proceso de abordaje el jefe no le dio acceso: el dueño del repositorio no le agregó dandole acceso.
+* 6. Ir a settings del repositorio, veremos la opsión Collaborators, agregamos el correo o nombre de usuario: el colaborador debe tener un email publico y visible o de otra manera debera ser con el nombre de usuario publico: ingresar el username y debe ir como colaborador.
+* 7. Se puede enviar un email con la url, pero ya GitHub envia una notificación al usuario de invitado, es una cosa que debemos empezar a consultar y revisar.
+* 8. El colaborador debe aceptar la invitación, una vez hecho eso ya tendrá total acceso para hacer push al repositorio.
 ```sh
 git pull origin main
 git push origin main #Colocar nombre de usuario y contraseña, listo
 ```
-## 9. El dueño del repositorio no ve los cambios, ¿Qué hacer?
+* 9. El dueño del repositorio no ve los cambios, ¿Qué hacer?
 ```sh
 git pull origin main
 git fetch
 git log --stat #Se verá claro que el colaborador ingreso su primer commit
 ```
-## 10. A partir de ahora el dueño del repositorio y el colaborador deberán repartir el trabajo, esto se hace con distintas ramas de trabajo: el dueño trabajará desde la rama header y el colaborador desde la rama footer, al final cuando se termine, se hara un merge para terminar el proyecto.
+* 10. A partir de ahora el dueño del repositorio y el colaborador deberán repartir el trabajo, esto se hace con distintas ramas de trabajo: el dueño trabajará desde la rama header y el colaborador desde la rama footer, al final cuando se termine, se hara un merge para terminar el proyecto.
 
 
 
