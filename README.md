@@ -15,7 +15,7 @@ Hemos comenzado con el repositorio, les voy a dejar los comandos que utilice:<br
     cd Documents
     mkdir Proyectos
     cd Proyectos
-    git clone git@github.com:Lautaro-404/Prueba-inicio-Repo.git
+    git clone git@github.com:HotCode2025/Print-Estoy-Cansado-Jefe--Segundo-Semestre.git
     cd Prueba-Inicio-Repo
     git pull origin main
     git fetch
