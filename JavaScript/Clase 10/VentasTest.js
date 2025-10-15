@@ -1,3 +1,4 @@
+// Creamos la clase 'Producto'
 class Producto {
   static contadorProductos = 0;
 
@@ -32,6 +33,7 @@ class Producto {
   }
 }
 
+// Creamos la clase 'Orden'
 class Orden {
   static contadorOrdenes = 0;
   static MAX_PRODUCTOS = 5;
@@ -42,13 +44,15 @@ class Orden {
   }
 
   agregarProducto(producto) {
+    // Validar el limite de productos
     if (this._productos.length < Orden.MAX_PRODUCTOS) {
       this._productos.push(producto);
     } else {
-      console.log('No se pueden agregar más productos a esta orden.');
+      console.log(`No se pueden agregar más de ${Orden.MAX_PRODUCTOS} productos. Tendra que crear otra orden.`);
     }
   }
 
+  // Sumar el precio de todos los productos
   calcularTotal() {
     let total = 0;
     for (let producto of this._productos) {
@@ -57,23 +61,34 @@ class Orden {
     return total;
   }
 
+  // Mostrar la orden completa
   mostrarOrden() {
-    let productosStr = '';
+    let listadoProductos = '';
     for (let producto of this._productos) {
-      productosStr += '\n  ' + producto.toString();
+      listadoProductos += '\n  ' + producto.toString();
     }
-    console.log(`Orden [ID: ${this._idOrden}, Total: $${this.calcularTotal()}, Productos: ${productosStr}]`);
+    return `Orden [ID: ${this._idOrden},\nProductos: ${listadoProductos},\nTotal: $${this.calcularTotal()}]`;
   }
 }
 
-// ---- VentasTest ----
+// Pruebas
+// Creacion de los productos
 const producto1 = new Producto('Camisa', 500);
 const producto2 = new Producto('Pantalón', 800);
 const producto3 = new Producto('Cinturón', 300);
 
+// Mostrar los productos
+console.log('Productos creados:');
+console.log(producto1.toString());
+console.log(producto2.toString());
+console.log(producto3.toString());
+
+// Crear una orden y agregar los productos
 const orden1 = new Orden();
 orden1.agregarProducto(producto1);
 orden1.agregarProducto(producto2);
 orden1.agregarProducto(producto3);
 
-orden1.mostrarOrden();
+// Mostrar la orden completa
+console.log('Orden creada:');
+console.log(orden1.mostrarOrden());
