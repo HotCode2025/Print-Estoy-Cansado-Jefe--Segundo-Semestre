@@ -1,5 +1,19 @@
 # Print-Estoy-Cansado-Jefe--Segundo-Semestre
 
+## Integrantes
+
+- Albornoz Gian Franco,
+- Arreceygor Fabio,
+- Bruna Roy,
+- Cisterna Abril,
+- Fernández Franco,
+- Fernández Valentín,
+- Platero Martin,
+- Ponzina Lautaro,
+- Marcos Ortíz,
+- Nicolás Veloz, 
+- Sat Emir.
+
 # Comienzo del Readme
 Hemos comenzado con el repositorio, les voy a dejar los comandos que utilice:<br>
 
