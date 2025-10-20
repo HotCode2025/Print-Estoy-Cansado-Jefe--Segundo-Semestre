@@ -1,19 +1,9 @@
-## Clase 11 Cosas importantes en JavaScript -> Tarea
+# Clase 11 Cosas importantes en JavaScript -> Tarea
 
 ## Grupo: Print("Estoy Cansado Jefe");
 
 ## Integrantes: 
-# Albornoz Gian Franco,
-# Arreceygor Fabio,
-# Bruna Roy,
-# Cisterna Abril,
-# Fernández Franco,
-# Fernández Valentín,
-# Platero Martin,
-# Ponzina Lautaro,
-# Marcos Ortíz,
-# Nicolás Veloz, 
-# Sat Emir.
+### Albornoz Gian Franco, Arreceygor Fabio, Bruna Roy, Cisterna Abril, Fernández Franco, Fernández Valentín, Platero Martin, Ponzina Lautaro, Marcos Ortíz, Nicolás Veloz, Sat Emir.
 
 
 # En este documento explicamos el significado y propósito de varias funciones en JavaScript, clasificadas por tipo de tarea.
