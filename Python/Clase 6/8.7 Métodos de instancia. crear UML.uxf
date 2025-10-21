@@ -1,10 +1,10 @@
-<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>370</x><y>60</y><w>210</w><h>110</h></coordinates><panel_attributes>&lt;&lt;Persona&gt;&gt;
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>370</x><y>60</y><w>210</w><h>110</h></coordinates><panel_attributes>&lt;&lt;Persona&gt;&gt;
 --
 -nombre: str
 -apellido: str
 -edad: int
 --
-mostrar_detalle()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>640</x><y>310</y><w>210</w><h>80</h></coordinates><panel_attributes>&lt;&lt;persona2: Persona&gt;&gt;
+/mostrar_detalle()/</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>640</x><y>310</y><w>210</w><h>80</h></coordinates><panel_attributes>&lt;&lt;persona2: Persona&gt;&gt;
 --
 nombre: str = 'Hatsune'
 apellido: stre = 'Miku'
