@@ -21,3 +21,6 @@ function validatePassword(password) {
     // Si pasó todas las condiciones, la contraseña es válida
     return true;
 }
+console.log(validatePassword("Abc12345")); 
+
+console.log(validatePassword("weak")); 
