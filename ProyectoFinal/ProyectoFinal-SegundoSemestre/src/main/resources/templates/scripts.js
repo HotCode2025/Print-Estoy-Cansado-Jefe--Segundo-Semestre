@@ -11,4 +11,9 @@ document.querySelectorAll('.nube').forEach(nube => {
   });
 });
 
+document.getElementById('tuBoton').addEventListener('click', () => {
+  document.body.innerHTML = '<h1>Cargando...</h1>';
+});
+
+
 

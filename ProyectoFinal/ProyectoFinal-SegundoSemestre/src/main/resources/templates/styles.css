@@ -89,3 +89,19 @@ h1 {
   text-shadow: 1px 1px var(--color-secundario);
   z-index: 3; /*El z-index que sea mayor es el que va a permitir que el texto se mantenga arriba*/
 }
+
+.nubedeco {
+  position: absolute;
+  top: 0;
+  width: 300px;
+  height: auto;
+  z-index: 0;
+  opacity: 0.8;
+}
+
+.nubedeco.izq{
+  left: 3rem;
+}
+.nubedeco.der{
+  right: 3rem;
+}
