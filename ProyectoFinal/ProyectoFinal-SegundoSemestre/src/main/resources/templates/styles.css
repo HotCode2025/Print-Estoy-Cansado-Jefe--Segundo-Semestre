@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Gluten:wght@100..900&display=swap');
+@import url('https://fonts.cdnfonts.com/css/akbar?styles=128639');
+
+:root{
+    --color-principal: #FED90F;
+    --color-secundario: #000000;
+    --color-terciario: #FFFFFF 59%;
+
+    --font-principal: "Akbar", "Gloria Hallelujah", sans-serif;
+    --font-secondary: "Gluten", sans-serif; 
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-principal);
+  background: linear-gradient(to top, #87CEEB, #ffffff);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.container {
+  text-align: center;
+}
+
+h1 {
+  color: var(--color-principal);
+  -webkit-text-stroke-color: var(--color-secundario); /*Agrega el borde al texto*/
+  -webkit-text-stroke-width: 1px;
+  text-shadow: 2px 2px var(--color-secundario);
+  font-size: 4rem;
+  margin-bottom: 8rem;
+  margin-top: 8rem;
+}
+
+.nubes {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.nube-contenedor {
+  position: relative;
+  width: 400px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nube {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('assets/nube.png');
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+
+.imagen-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+.nube:hover + .imagen-hover {
+  opacity: 1;
+}
+
+/*Para evitar que desaparezca el texto cuando acercas el mouse*/
+.texto-nube {
+  color: var(--color-principal);
+  font-size: 2rem;
+  -webkit-text-stroke-color: var(--color-secundario);
+  -webkit-text-stroke-width: 1px;
+  text-shadow: 1px 1px var(--color-secundario);
+  z-index: 3; /*El z-index que sea mayor es el que va a permitir que el texto se mantenga arriba*/
+}
