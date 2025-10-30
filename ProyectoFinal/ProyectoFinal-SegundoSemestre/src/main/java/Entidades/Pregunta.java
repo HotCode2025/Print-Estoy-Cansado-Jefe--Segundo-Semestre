@@ -2,6 +2,7 @@ package Entidades;
 
 import java.util.List;
 
+@Entity
 public class Pregunta {
 
     private int id;
