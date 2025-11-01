@@ -10,7 +10,6 @@
 - Fernández Valentín,
 - Platero Martin,
 - Ponzina Lautaro,
-- Marcos Ortíz,
 - Nicolás Veloz, 
 - Sat Emir.
 
