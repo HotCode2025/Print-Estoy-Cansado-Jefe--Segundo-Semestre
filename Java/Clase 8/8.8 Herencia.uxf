@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diagram program="umlet" version="14.2">
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>300</x>
+      <y>40</y>
+      <w>260</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>Persona
+--
+-nombre: String
+-genero: char
+-edad: int
+-direccion: String
+--
++getNombre(): String
++setNombre(String): void
++getGenero(): char
++setGenero(char): void
++getEdad(): int
++setEdad(int): void
++getDireccion(): String
++setDireccion(String): void</panel_attributes>
+  </element>
+
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>60</x>
+      <y>320</y>
+      <w>260</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>Empleado
+--
+-idEmpleado: int
+-sueldo: double
+--
++getIdEmpleado(): int
++getSueldo(): double
++setSueldo(double): void</panel_attributes>
+  </element>
+
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>540</x>
+      <y>320</y>
+      <w>260</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>Cliente
+--
+-idCliente: int
+-fechaRegistro: Date
+-vip: boolean
+--
++getIdCliente(): int
++getFechaRegistro(): Date
++setFechaRegistro(Date): void
++isVip(): boolean
++setVip(boolean): void</panel_attributes>
+  </element>
+
+  <!-- Herencia Empleado -> Persona -->
+  <element>
+    <id>UMLGeneralization</id>
+    <coordinates>
+      <x>210</x>
+      <y>240</y>
+      <w>220</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes></panel_attributes>
+  </element>
+
+  <!-- Herencia Cliente -> Persona -->
+  <element>
+    <id>UMLGeneralization</id>
+    <coordinates>
+      <x>430</x>
+      <y>240</y>
+      <w>220</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes></panel_attributes>
+  </element>
+</diagram>
