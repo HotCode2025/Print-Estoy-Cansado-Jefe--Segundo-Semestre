@@ -1,7 +1,7 @@
 package ar.com.codesystem.ventas;
 
 public class Orden {
-    private int inOrden;
+    private int idOrden;
     private Producto productos[];  //Declaramos el arreglo
     private static int contadorOrdenes;
     private int contadorProductos;
@@ -10,7 +10,7 @@ public class Orden {
     //Constructor vacio
 
     public Orden() {
-        this.inOrden = ++Orden.contadorOrdenes;
+        this.idOrden = ++Orden.contadorOrdenes;
         this.productos = new Producto[Orden.MAX_PRODUCTOS];
     }
     public void agregarProducto(Producto producto){
