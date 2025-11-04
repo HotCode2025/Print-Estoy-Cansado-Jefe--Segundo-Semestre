@@ -1,8 +1,9 @@
-"""
+class Aritmetica
+    """
 El nombre de este tipo de comentario es: Docstring
 esto es documentación de la clase en python 
 Vamos a hacer en esta clase algunas operaciones de: Suma, Resta, multiplicación y mas
-
+    """
 def __init__(self, operandoA, operandoB):
     self.operandoA = operandoA
     self.operandoB = operandoB
