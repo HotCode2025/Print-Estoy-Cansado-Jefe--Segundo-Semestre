@@ -154,9 +154,7 @@ public class Respuesta {
     }
 }
 
-
-
-
+//Contador de Vidas
 public class ContadorVidas {
 
     private int vidas;
