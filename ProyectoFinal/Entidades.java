@@ -1,3 +1,4 @@
+// Partida 
 public class Partida {
 
     private Long id;
@@ -50,6 +51,7 @@ public class Partida {
     }
 }
 
+// Pregunta
 public class Pregunta {
 
     private int id;
@@ -100,6 +102,7 @@ public class Pregunta {
     }
 }
 
+//Respuesta
 public class Respuesta {
 
     private Long id;
