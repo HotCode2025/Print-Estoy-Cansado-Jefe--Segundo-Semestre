@@ -202,6 +202,8 @@ public class TriviaSimpsons {
         limpiarPantalla();
     }
 
+    
+
     // --- Carga de Preguntas (usando la clase Pregunta) ---
     private static List<Pregunta> cargarPreguntas() {
         List<Pregunta> preguntas = new ArrayList<>();
@@ -240,9 +242,154 @@ public class TriviaSimpsons {
     }
 
     // --- Métodos Auxiliares (Tutorial, limpiarPantalla, etc.) se mantienen igual ---
-    private static void tutorial() { /* ... */ }
-    private static void limpiarPantalla() { /* ... */ }
-    private static void pausar() { /* ... */ }
+    private static void tutorial() {
+        String listo;
+        String respuesta;
+        boolean continuarTutorial;
+        int indiceRespuesta = -1;
+
+        // Pregunta de práctica 1: Respuesta correcta 'b' (índice 1)
+        Pregunta pregunta1 = new Pregunta(999,"¿Cuánto es 1 + 1?",Arrays.asList("1", "2", "3"),1);
+
+        // Pregunta de práctica 2: Respuesta correcta 'b' (índice 1)
+        Pregunta pregunta2 = new Pregunta(998,"¿Cuál es la primera letra del abecedario?",Arrays.asList("B", "A", "Z"),1);
+
+        do {
+            continuarTutorial = true;
+            System.out.println("========================================");
+            System.out.println("         === TUTORIAL DE PRÁCTICA ===         ");
+            System.out.println("========================================");
+            System.out.println("Aquí podrás practicar con preguntas sencillas sin afectar tu puntaje ni tus vidas.");
+            System.out.println("-> Ingresa la opción (a, b ó c) y luego presiona ENTER.");
+            System.out.print("ENTER para continuar:");
+            scanner.nextLine();
+            limpiarPantalla();
+
+            // PRIMERA PREGUNTA: Debe responder 'b' para avanzar
+            do {
+                mostrarPreguntaEnmarcadaTutorial(pregunta1, 1);
+                
+                System.out.print("Tu respuesta:");
+                respuesta = scanner.nextLine().toLowerCase().trim();
+                limpiarPantalla();
+                
+                // Conversión de respuesta de char a índice (0, 1, 2)
+                indiceRespuesta = respuesta.matches("[abc]") ? respuesta.charAt(0) - 'a' : -1;
+                
+                if (indiceRespuesta == -1) {
+                    System.out.println("Opción inválida. Por favor ingresá a, b ó c.");
+                    System.out.print("Presiona ENTER para reintentar...");
+                    scanner.nextLine();
+                    limpiarPantalla();
+                    continue; 
+                }
+                
+                if (indiceRespuesta == pregunta1.getIndiceCorrecto()) {
+                    System.out.println("¡CORRECTO! ¡Excelente, este es el camino a Springfield!");
+                } else {
+                    System.out.println("¡DOH! Respuesta Incorrecta.");
+                    System.out.println("La respuesta correcta es b) 2.");
+                    System.out.println("Recuerda marcar la opción (la letra) y no la respuesta en sí (el número).");
+                    System.out.println("Volvamos a intentarlo...");
+                }
+                
+                pausar();//System.out.print("Presiona ENTER para continuar...");
+                //scanner.nextLine();
+                limpiarPantalla();
+                
+            } while (indiceRespuesta != pregunta1.getIndiceCorrecto()); // 'indiceRespuesta' es visible aquí
+
+            // SEGUNDA PREGUNTA: Solo debe ingresar una opción válida (a, b, c) para avanzar
+            do {
+                mostrarPreguntaEnmarcadaTutorial(pregunta2, 2);
+                
+                System.out.print("Tu respuesta:");
+                respuesta = scanner.nextLine().toLowerCase().trim();
+                limpiarPantalla();
+                
+                // Conversión de respuesta de char a índice (0, 1, 2)
+                indiceRespuesta = respuesta.matches("[abc]") ? respuesta.charAt(0) - 'a' : -1;
+
+                if (indiceRespuesta == -1) {
+                    System.out.println("Opción inválida. Por favor ingresá a, b ó c.");
+                    System.out.print("Presiona ENTER para reintentar...");
+                    scanner.nextLine();
+                    limpiarPantalla();
+                    continue; 
+                }
+
+                if (indiceRespuesta == pregunta2.getIndiceCorrecto()) {
+                    System.out.println("¡CORRECTO!");
+                } else {
+                    char respuestaCorrecta = (char)('a' + pregunta2.getIndiceCorrecto());
+                    String textoRespuesta = pregunta2.getOpciones().get(pregunta2.getIndiceCorrecto());
+                    
+                    System.out.println("Incorrecto. La respuesta correcta es " + respuestaCorrecta + ") " + textoRespuesta + ".");
+                    System.out.println("¡No lo olvides, siempre selecciona la opción (la letra)! ");
+                }
+                
+                pausar();
+                /*System.out.print("Presiona ENTER para continuar...");
+                scanner.nextLine();*/
+                limpiarPantalla();
+
+            } while (indiceRespuesta == -1); // 'indiceRespuesta' es visible aquí
+
+            System.out.println("\n========================================");
+            System.out.println("Tutorial finalizado. ¡Estás listo para el juego!");
+            System.out.println("========================================");
+            System.out.println("s + ENTER para comenzar a jugar / r + ENTER para reiniciar el tutorial");
+            System.out.print("¿Querés empezar el juego ahora? (s/r): ");
+            listo = scanner.nextLine().toLowerCase().trim();
+
+            if (listo.equals("r")) {
+                continuarTutorial = true;
+            } else if (listo.equals("s")) {
+                continuarTutorial = false;
+            } else {
+                // Si el usuario introduce algo diferente a 's' o 'r', se reinicia el bucle 
+                continuarTutorial = true; 
+            }
+            limpiarPantalla();
+        } while (continuarTutorial);
+    }
+
+     /*Muestra la pregunta de forma enmarcada, similar al juego real.*/
+
+    private static void mostrarPreguntaEnmarcadaTutorial(Pregunta pregunta, int numeroPregunta) {
+        limpiarPantalla();
+        System.out.println("--------------------------------------------------");
+        System.out.println("PREGUNTA DE PRÁCTICA #" + numeroPregunta);
+        System.out.println("--------------------------------------------------");
+        // Usa getTexto()
+        System.out.println(pregunta.getTexto()); 
+        System.out.println("--------------------------------------------------");
+
+        char opcion = 'a';
+        for (String resp : pregunta.getOpciones()) {
+            System.out.println(opcion + ") " + resp);
+            opcion++;
+        }
+        System.out.println("--------------------------------------------------");
+    }
+    private static void limpiarPantalla() {
+        try {
+            // Intento 1: Usar código ANSI para limpiar la pantalla 
+            // Esto funciona en la mayoría de terminales modernas (Linux, Mac, PowerShell)
+            final String ANSI_CLS = "\033[2J";
+            final String ANSI_HOME = "\033[H";
+            System.out.print(ANSI_CLS + ANSI_HOME);
+            System.out.flush();
+        } catch (final Exception e) {
+            // Si el código ANSI falla, se usa el método de imprimir múltiples líneas nuevas.
+            System.out.println(new String(new char[50]).replace('\0', '\n'));
+        }
+    }
+    private static void pausar() {
+        //Detiene el codigo hasta que el jugador presione ENTER
+        System.out.print("\nPresiona ENTER para continuar...");
+        scanner.nextLine();
+     }
     private static void mostrarReglas() { /* ... */ }
     private static void mostrarPreguntaEnmarcada(Pregunta pregunta, int numeroPregunta) { /* ... */ }
     private static void mostrarResultadoNivel(String nivel, int correctas, int totalNivel, int puntosAcumulados) { /* ... */ }
