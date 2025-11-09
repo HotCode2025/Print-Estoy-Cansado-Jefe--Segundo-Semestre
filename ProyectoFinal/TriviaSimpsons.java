@@ -8,6 +8,7 @@ public class TriviaSimpsons {
 
     private static final Scanner scanner = new Scanner(System.in);
     private static Partida partidaActual = new Partida(); // Usamos la clase Partida para el estado
+    private static Puntuacion Puntuacion = new Puntuacion(); //Usamos la clase Puntuacion para manejar los puntajes
     private static ContadorVidas vidas = new ContadorVidas(); // Usamos la clase ContadorVidas
     private static int preguntasContestadas = 0;
     private static final int TOTAL_PREGUNTAS = 20;
@@ -88,8 +89,8 @@ public class TriviaSimpsons {
                     mostrarReglas();
                     break;
                 case 3:
-                    // Usamos el getter de Partida para obtener el puntaje
-                    mostrarPuntajes(partidaActual.getPuntajeObtenido());
+                    limpiarPantalla();
+                    Puntuacion.mostrarPuntajes();
                     break;
                 case 4:
                     limpiarPantalla();
@@ -193,9 +194,11 @@ public class TriviaSimpsons {
         // Final de la Trivia
         mostrarResultadoFinal(preguntasContestadas, partidaActual.getPuntajeObtenido()); // Usamos getter de Partida
 
-        // La clase Partida se podría usar para guardar el registro final aquí
-        partidaActual.setId(1L); // Ejemplo
-        partidaActual.setFecha(LocalDateTime.now()); // Usamos el setter de Partida
+        //Pedir el nombre del jugador y guardar el puntaje junto con el nombre
+        System.out.println("Ingresá tu nombre para guardar tus puntos: ");
+        String nombreJugador = scanner.nextLine();
+        //Seguimos usando el getter de Partida para obtener el puntaje
+        Puntuacion.guardarPuntaje(nombreJugador, partidaActual.getPuntajeObtenido());
 
         System.out.print("Presiona Enter para regresar al menú principal...");
         scanner.nextLine();
@@ -394,13 +397,7 @@ public class TriviaSimpsons {
     private static void mostrarPreguntaEnmarcada(Pregunta pregunta, int numeroPregunta) { /* ... */ }
     private static void mostrarResultadoNivel(String nivel, int correctas, int totalNivel, int puntosAcumulados) { /* ... */ }
     private static void mostrarResultadoFinal(int correctas, int puntosAcumulados) { /* ... */ }
-    private static void mostrarPuntajes(int puntajeActual) { /* ... */ }
-    private static String generarNombreFicticio(int indice) {
-        String[] nombres = {"Emir", "Valentin", "Gian", "Fabio", "Lautaro", "Franco", "Roy", "Nicolas", "Abril", "Marcos", "Martin", "Lisa"};
 
-        // Aseguramos que el índice no se salga del array, usando Lisa por defecto si es muy alto
-        return nombres[Math.min(indice, nombres.length - 1)];
-    }
     private static String obtenerSeparadorPSeInt() {
         return  "_____ .   . .___  .__  __   .___ . . .  . _____   __     __ . . __ \n" +
                 "  |  |   | |    |  \\ (__` |    | | \\ |   |    (__`  /   \\ |\\  | (__`\n" +

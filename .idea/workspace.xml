@@ -26,22 +26,12 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "Tecnicatura",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Users/GIAN/Documents/GitHub/Print-Estoy-Cansado-Jefe--Segundo-Semestre"
   }
 }]]></component>
   <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="Print-Estoy-Cansado-Jefe--Segundo-Semestre" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="Print-Estoy-Cansado-Jefe--Segundo-Semestre" />
-      <option name="filePath" />
-      <method v="2" />
-    </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="Print-Estoy-Cansado-Jefe--Segundo-Semestre" />
       <option name="ENV_FILES" value="" />
@@ -74,6 +64,17 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="Print-Estoy-Cansado-Jefe--Segundo-Semestre" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="Print-Estoy-Cansado-Jefe--Segundo-Semestre" />
+      <option name="filePath" />
       <method v="2" />
     </configuration>
   </component>
