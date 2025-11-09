@@ -195,7 +195,7 @@ public class TriviaSimpsons {
         mostrarResultadoFinal(preguntasContestadas, partidaActual.getPuntajeObtenido()); // Usamos getter de Partida
 
         //Pedir el nombre del jugador y guardar el puntaje junto con el nombre
-        System.out.println("Ingresá tu nombre para guardar tus puntos: ");
+        System.out.println("\nIngresá tu nombre para guardar tus puntos: ");
         String nombreJugador = scanner.nextLine();
         //Seguimos usando el getter de Partida para obtener el puntaje
         Puntuacion.guardarPuntaje(nombreJugador, partidaActual.getPuntajeObtenido());
