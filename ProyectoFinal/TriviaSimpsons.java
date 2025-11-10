@@ -189,7 +189,9 @@ public class TriviaSimpsons {
                 } while (!respuestaUsuario.matches("[abc]")); // Validación más concisa
 
                 //limpiar pantalla
-
+                for (int j = 0; j < 50; j++) {
+                    System.out.println();
+                }
 
                 boolean fueCorrecta = false;
 
@@ -209,7 +211,10 @@ public class TriviaSimpsons {
 
                 // Usamos el getter de Partida
                 System.out.println("Puntaje acumulado: " + partidaActual.getPuntajeObtenido() + " puntos.");
-
+                //limpiar pantalla
+                for (int j = 0; j < 50; j++) {
+                    System.out.println();
+                }
                 if (!vidas.estaVivo()) {
                     System.out.println("\n¡Te has quedado sin vidas! Juego Terminado.");
                     pausar();
@@ -220,7 +225,7 @@ public class TriviaSimpsons {
                 scanner.nextLine();
 
             }
-            
+
             // Mostrar resultados del nivel
             mostrarResultadoNivel(nombresNivel[nivel], correctasNivel, preguntasPorNivel, partidaActual.getPuntajeObtenido()); // Usamos getter de Partida
             System.out.print("Presiona Enter para continuar con la dificultad " +
