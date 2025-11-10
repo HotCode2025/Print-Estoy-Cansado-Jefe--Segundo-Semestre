@@ -12,6 +12,16 @@ public class TriviaSimpsons {
     private static ContadorVidas vidas = new ContadorVidas(); // Usamos la clase ContadorVidas
     private static int preguntasContestadas = 0;
     private static final int TOTAL_PREGUNTAS = 20;
+    private static final java.util.Random random = new java.util.Random();
+
+    // Se crea un array de Strings que contiene algunos de los ASCII
+    private static final String[] artesPermitidos = {
+            ArteASCII.Bart(),
+            ArteASCII.Lisa(),
+            ArteASCII.Maggie(),
+            ArteASCII.Homero(),
+            ArteASCII.Marge()
+    };
 
     // Se usa el setter de Partida para actualizar el puntaje
     public static void incrementarPuntaje(int puntosExtra) {
@@ -148,7 +158,7 @@ public class TriviaSimpsons {
             System.out.println();
         }
         System.out.println("¡Bienvenido! Gracias por animarte a enfrentar esta desafiante trivia.");
-        // ... (resto de ASCII art y texto de bienvenida)
+        ArteASCII.FamiliaCompleta();
         System.out.println("\nPRESIONA ENTER PARA EMPEZAR CON EL TUTORIAL");
         scanner.nextLine();
         tutorial();
@@ -216,6 +226,7 @@ public class TriviaSimpsons {
                     System.out.println();
                 }
                 if (!vidas.estaVivo()) {
+                    ArteASCII.BurlaBart();
                     System.out.println("\n¡Te has quedado sin vidas! Juego Terminado.");
                     pausar();
                     break;
@@ -416,6 +427,7 @@ public class TriviaSimpsons {
             System.out.println("\n========================================");
             System.out.println("Tutorial finalizado. ¡Estás listo para el juego!");
             System.out.println("========================================");
+            ArteASCII.HomeroCompleto();
             System.out.println("s + ENTER para comenzar a jugar / r + ENTER para reiniciar el tutorial");
             System.out.print("¿Querés empezar el juego ahora? (s/r): ");
             listo = scanner.nextLine().toLowerCase().trim();
@@ -489,6 +501,10 @@ public class TriviaSimpsons {
     }
 
     private static void mostrarPreguntaEnmarcada(Pregunta pregunta, int numeroPregunta) {
+
+        int indice = random.nextInt(artesPermitidos.length);
+        System.out.println(artesPermitidos[indice]);
+
         System.out.println("""
         =================================================
         PREGUNTA #""" + numeroPregunta );
