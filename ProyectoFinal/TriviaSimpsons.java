@@ -188,10 +188,6 @@ public class TriviaSimpsons {
                     respuestaUsuario = scanner.nextLine().toLowerCase();
                 } while (!respuestaUsuario.matches("[abc]")); // Validación más concisa
 
-                //limpiar pantalla
-                for (int j = 0; j < 50; j++) {
-                    System.out.println();
-                }
 
                 boolean fueCorrecta = false;
 
@@ -207,14 +203,13 @@ public class TriviaSimpsons {
                 }
 
                 preguntasContestadas++;
-                MostrarProgreso(preguntasContestadas, fueCorrecta);
+                MostrarProgreso(preguntasContestadas, fueCorrecta); //Muestra WooHoo/Doh! y nuestra funcion
 
                 // Usamos el getter de Partida
                 System.out.println("Puntaje acumulado: " + partidaActual.getPuntajeObtenido() + " puntos.");
-                //limpiar pantalla
-                for (int j = 0; j < 50; j++) {
+
                     System.out.println();
-                }
+                
                 if (!vidas.estaVivo()) {
                     System.out.println("\n¡Te has quedado sin vidas! Juego Terminado.");
                     pausar();
@@ -224,6 +219,9 @@ public class TriviaSimpsons {
                 System.out.print("Presiona Enter para continuar...");
                 scanner.nextLine();
 
+                for (int j = 0; j < 50; j++) {
+                    System.out.println();
+                }
             }
 
             // Mostrar resultados del nivel
@@ -420,14 +418,9 @@ public class TriviaSimpsons {
             System.out.print("¿Querés empezar el juego ahora? (s/r): ");
             listo = scanner.nextLine().toLowerCase().trim();
 
-            if (listo.equals("r")) {
-                continuarTutorial = true;
-            } else if (listo.equals("s")) {
-                continuarTutorial = false;
-            } else {
-                // Si el usuario introduce algo diferente a 's' o 'r', se reinicia el bucle 
-                continuarTutorial = true; 
-            }
+            // optimizacion de bloque if/else
+            continuarTutorial = !listo.equals("s");
+
             //limpiar pantalla
             for (int i = 0; i < 50; i++) {
                 System.out.println();
