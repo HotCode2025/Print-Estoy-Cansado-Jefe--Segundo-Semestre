@@ -83,17 +83,47 @@ public class TriviaSimpsons {
 
             switch (opcion) {
                 case 1:
+                    //limpiar pantalla
+                    for (int i = 0; i < 50; i++) {
+                        System.out.println();
+                    }
+
                     jugar();
+                    
                     break;
                 case 2:
+                    //limpiar pantalla
+                    for (int i = 0; i < 50; i++) {
+                        System.out.println();
+                    }
                     mostrarReglas();
+                    //limpiar pantalla
+                    for (int i = 0; i < 50; i++) {
+                        System.out.println();
+                    }
+
                     break;
                 case 3:
-                    limpiarPantalla();
+                    //limpiar pantalla
+                    for (int i = 0; i < 50; i++) {
+                        System.out.println();
+                    }
+
                     Puntuacion.mostrarPuntajes();
+                    //Detiene el codigo hasta que el jugador presione ENTER
+                    System.out.print("\nPresiona ENTER para continuar...");
+                    scanner.nextLine();
+                    //limpiar pantalla
+                    for (int i = 0; i < 50; i++) {
+                        System.out.println();
+                    }
+
                     break;
                 case 4:
-                    limpiarPantalla();
+                    //limpiarPantalla
+                     for (int i = 0; i < 50; i++) {
+                        System.out.println();
+                    }
                     System.out.println("Saliendo del programa...");
                     continuar = false;
                     break;
@@ -104,6 +134,7 @@ public class TriviaSimpsons {
             }
         } while (continuar);
     }
+
 
     private static void jugar() {
         // Reiniciar estado de la partida y vidas al iniciar
