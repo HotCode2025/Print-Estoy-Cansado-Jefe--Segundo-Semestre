@@ -143,7 +143,10 @@ public class TriviaSimpsons {
         vidas = new ContadorVidas(); // Nueva instancia con 3 vidas (o lo que defina el constructor)
 
         // 1. Mostrar introducción y tutorial (se mantiene la simplificación)
-        limpiarPantalla();
+        //limpiar pantalla
+        for (int i = 0; i < 50; i++) {
+            System.out.println();
+        }
         System.out.println("¡Bienvenido! Gracias por animarte a enfrentar esta desafiante trivia.");
         // ... (resto de ASCII art y texto de bienvenida)
         System.out.println("\nPRESIONA ENTER PARA EMPEZAR CON EL TUTORIAL");
@@ -161,7 +164,10 @@ public class TriviaSimpsons {
             // Se usa el getter estaVivo() de ContadorVidas
             if (!vidas.estaVivo()) break;
 
-            limpiarPantalla();
+            //limpiar pantalla
+            for (int i = 0; i < 50; i++) {
+                System.out.println();
+            }
             System.out.println("DIFICULTAD " + nombresNivel[nivel] + " (Preguntas " + (nivel * preguntasPorNivel + 1) + " - " + ((nivel + 1) * preguntasPorNivel) + ")");
             System.out.println(obtenerSeparadorPSeInt());
 
@@ -182,7 +188,8 @@ public class TriviaSimpsons {
                     respuestaUsuario = scanner.nextLine().toLowerCase();
                 } while (!respuestaUsuario.matches("[abc]")); // Validación más concisa
 
-                limpiarPantalla();
+                //limpiar pantalla
+
 
                 boolean fueCorrecta = false;
 
@@ -211,15 +218,18 @@ public class TriviaSimpsons {
 
                 System.out.print("Presiona Enter para continuar...");
                 scanner.nextLine();
-                limpiarPantalla();
-            }
 
+            }
+            
             // Mostrar resultados del nivel
             mostrarResultadoNivel(nombresNivel[nivel], correctasNivel, preguntasPorNivel, partidaActual.getPuntajeObtenido()); // Usamos getter de Partida
             System.out.print("Presiona Enter para continuar con la dificultad " +
                     (nivel < 3 ? nombresNivel[nivel + 1] : "FINAL") + "...");
             scanner.nextLine();
-            limpiarPantalla();
+            //limpiar pantalla
+            for (int i = 0; i < 50; i++) {
+                System.out.println();
+            }
         }
 
         // Final de la Trivia
@@ -233,7 +243,10 @@ public class TriviaSimpsons {
 
         System.out.print("Presiona Enter para regresar al menú principal...");
         scanner.nextLine();
-        limpiarPantalla();
+        //limpiar pantalla
+        for (int i = 0; i < 50; i++) {
+            System.out.println();
+        }
     }
 
     
@@ -302,7 +315,10 @@ public class TriviaSimpsons {
             
             ENTER para continuar:""");
             scanner.nextLine();
-            limpiarPantalla();
+            //limpiar pantalla
+            for (int i = 0; i < 50; i++) {
+                System.out.println();
+            }
 
             // PRIMERA PREGUNTA: Debe responder 'b' para avanzar
             do {
@@ -310,7 +326,10 @@ public class TriviaSimpsons {
                 
                 System.out.print("Tu respuesta:");
                 respuesta = scanner.nextLine().toLowerCase().trim();
-                limpiarPantalla();
+                //limpiar pantalla
+                for (int i = 0; i < 50; i++) {
+                    System.out.println();
+                }
                 
                 // Conversión de respuesta de char a índice (0, 1, 2)
                 indiceRespuesta = respuesta.matches("[abc]") ? respuesta.charAt(0) - 'a' : -1;
@@ -319,7 +338,10 @@ public class TriviaSimpsons {
                     System.out.println("Opción inválida. Por favor ingresá a, b ó c.");
                     System.out.print("Presiona ENTER para reintentar...");
                     scanner.nextLine();
-                    limpiarPantalla();
+                    //limpiar pantalla
+                    for (int i = 0; i < 50; i++) {
+                        System.out.println();
+                    }
                     continue; 
                 }
                 
@@ -334,7 +356,10 @@ public class TriviaSimpsons {
                 
                 pausar();//System.out.print("Presiona ENTER para continuar...");
                 //scanner.nextLine();
-                limpiarPantalla();
+                //limpiar pantalla
+                for (int i = 0; i < 50; i++) {
+                    System.out.println();
+                }
                 
             } while (indiceRespuesta != pregunta1.getIndiceCorrecto()); // 'indiceRespuesta' es visible aquí
 
@@ -344,7 +369,10 @@ public class TriviaSimpsons {
                 
                 System.out.print("Tu respuesta:");
                 respuesta = scanner.nextLine().toLowerCase().trim();
-                limpiarPantalla();
+                //limpiar pantalla
+                for (int i = 0; i < 50; i++) {
+                    System.out.println();
+                }
                 
                 // Conversión de respuesta de char a índice (0, 1, 2)
                 indiceRespuesta = respuesta.matches("[abc]") ? respuesta.charAt(0) - 'a' : -1;
@@ -353,7 +381,10 @@ public class TriviaSimpsons {
                     System.out.println("Opción inválida. Por favor ingresá a, b ó c.");
                     System.out.print("Presiona ENTER para reintentar...");
                     scanner.nextLine();
-                    limpiarPantalla();
+                    //limpiar pantalla
+                    for (int i = 0; i < 50; i++) {
+                        System.out.println();
+                    }
                     continue; 
                 }
 
@@ -370,7 +401,10 @@ public class TriviaSimpsons {
                 pausar();
                 /*System.out.print("Presiona ENTER para continuar...");
                 scanner.nextLine();*/
-                limpiarPantalla();
+                //limpiar pantalla
+                for (int i = 0; i < 50; i++) {
+                    System.out.println();
+                }
 
             } while (indiceRespuesta == -1); // 'indiceRespuesta' es visible aquí
 
@@ -389,14 +423,20 @@ public class TriviaSimpsons {
                 // Si el usuario introduce algo diferente a 's' o 'r', se reinicia el bucle 
                 continuarTutorial = true; 
             }
-            limpiarPantalla();
+            //limpiar pantalla
+            for (int i = 0; i < 50; i++) {
+                System.out.println();
+            }
         } while (continuarTutorial);
     }
 
      /*Muestra la pregunta de forma enmarcada, similar al juego real.*/
 
     private static void mostrarPreguntaEnmarcadaTutorial(Pregunta pregunta, int numeroPregunta) {
-        limpiarPantalla();
+        //limpiar pantalla
+        for (int i = 0; i < 50; i++) {
+            System.out.println();
+        }
         System.out.println("--------------------------------------------------");
         System.out.println("PREGUNTA DE PRÁCTICA #" + numeroPregunta);
         System.out.println("--------------------------------------------------");
