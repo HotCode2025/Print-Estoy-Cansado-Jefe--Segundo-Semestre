@@ -62,7 +62,7 @@ public class TriviaSimpsons {
         do {
             limpiarPantalla();
             System.out.println("==============================");
-            System.out.println("      THE PSEINTSONS        ");
+            System.out.println("           JAVA D´OH!         ");
             System.out.println("==============================");
             System.out.println("1. JUGAR");
             System.out.println("2. REGLAS");
@@ -259,12 +259,17 @@ public class TriviaSimpsons {
 
         do {
             continuarTutorial = true;
-            System.out.println("========================================");
-            System.out.println("         === TUTORIAL DE PRÁCTICA ===         ");
-            System.out.println("========================================");
-            System.out.println("Aquí podrás practicar con preguntas sencillas sin afectar tu puntaje ni tus vidas.");
-            System.out.println("-> Ingresa la opción (a, b ó c) y luego presiona ENTER.");
-            System.out.print("ENTER para continuar:");
+            System.out.println("""
+                                  
+                                  ====================================
+                                  ◄◄◄◄=== TUTORIAL DE PRÁCTICA ===►►►►
+                                  ====================================
+                                  
+                                  
+               -> Aquí podrás practicar con preguntas sencillas sin afectar tu puntaje ni tus vidas.
+               -> Ingresa la opción (a, b ó c) y luego presiona ENTER.
+            
+            ENTER para continuar:""");
             scanner.nextLine();
             limpiarPantalla();
 
@@ -365,7 +370,7 @@ public class TriviaSimpsons {
         System.out.println("PREGUNTA DE PRÁCTICA #" + numeroPregunta);
         System.out.println("--------------------------------------------------");
         // Usa getTexto()
-        System.out.println(pregunta.getTexto()); 
+        System.out.println(pregunta.getTexto());
         System.out.println("--------------------------------------------------");
 
         char opcion = 'a';
@@ -393,16 +398,53 @@ public class TriviaSimpsons {
         System.out.print("\nPresiona ENTER para continuar...");
         scanner.nextLine();
      }
-    private static void mostrarReglas() { /* ... */ }
-    private static void mostrarPreguntaEnmarcada(Pregunta pregunta, int numeroPregunta) { /* ... */ }
+    private static void mostrarReglas() {
+        System.out.println("""
+        ========================================================
+                            REGLAS DEL JUEGO          
+        ========================================================
+        1. Tienes 3 vidas para completar 20 preguntas
+        2. 4 niveles de dificultad: Fácil, Medio, Difícil, Fan
+        3. Puntos por nivel: 50, 100, 150, 200
+        4. Respuesta incorrecta: pierdes 1 vida
+        5. ¡Demuestra que eres un verdadero fan de Los Simpsons!
+        =========================================================""");
+        pausar();
+    }
+
+    private static void mostrarPreguntaEnmarcada(Pregunta pregunta, int numeroPregunta) {
+        System.out.println("""
+        =================================================
+        PREGUNTA #""" + numeroPregunta );
+        System.out.println("""
+        =================================================
+        """ + pregunta.getTexto() );
+        System.out.println("""
+        =================================================
+        """);
+
+        char letra = 'a';
+        for (String opcion : pregunta.getOpciones()) {
+            System.out.println(letra + ") " + opcion);
+            letra++;
+        }
+
+        System.out.println("""
+        ================================================
+        """);
+    }
+
     private static void mostrarResultadoNivel(String nivel, int correctas, int totalNivel, int puntosAcumulados) { /* ... */ }
     private static void mostrarResultadoFinal(int correctas, int puntosAcumulados) { /* ... */ }
 
     private static String obtenerSeparadorPSeInt() {
-        return  "_____ .   . .___  .__  __   .___ . . .  . _____   __     __ . . __ \n" +
-                "  |  |   | |    |  \\ (__` |    | | \\ |   |    (__`  /   \\ |\\  | (__`\n" +
-                "  |  |---| |--- | __/   \\ |--- | | \\ |   |      \\  |  | | \\ |   \\ \n" +
-                "  |  |   | |___ |    \\__/ |___ | |  \\|   |   \\__/  \\__/  |  \\| \\__/ ";
+        return  "  ███████   ██████   ██    ██   ██████      ██████    ██  ██████   ██    ██   ██        \n" +
+                "       ██  ██    ██  ██    ██  ██    ██     ██   ██  ██  ██    ██  ██    ██   ██        \n" +
+                "       ██  ██    ██  ██    ██  ██    ██     ██    ██     ██    ██  ██    ██   ██        \n" +
+                "       ██  ████████  ██    ██  ████████     ██    ██     ██    ██  ████████   ██        \n" +
+                " ██    ██  ██    ██  ██    ██  ██    ██     ██    ██     ██    ██  ██    ██   ██        \n" +
+                " ██    ██  ██    ██   ██  ██   ██    ██     ██   ██      ██    ██  ██    ██             \n" +
+                "  ██████   ██    ██    ████    ██    ██     ██████        ██████   ██    ██   ██           ";
     }
 
     public static void main(String[] args) {
